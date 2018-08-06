@@ -9,27 +9,26 @@ class Stack(object):
     def __init__(self):
         self.items = deque()
 
-    def isEmpty(self):
+    def isempty(self):
         return self.items == deque()
 
     def push(self, item):
         self.items.appendleft(item)
 
     def pop(self):
-        return self.items.popleft()
+        if len(self.items) > 0:
+            return self.items.popleft()
+        else:
+            return "Stack is empty!"
 
     def peek(self):
-        return self.items[0]
+        if len(self.items) > 0:
+            return self.items[0]
+        else:
+            return "Stack is empty!"
 
     def size(self):
         return len(self.items)
 
     def show(self):
         return self.items
-
-
-st = Stack()
-st.push('A')
-st.push('B')
-
-print(st.show(), st.push('C'), st.size(),   st.peek())

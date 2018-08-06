@@ -5,7 +5,7 @@ from python_implement_common_datastructures import py_queue
 class TestQueue(unittest.TestCase):
 
     def setUp(self):
-        #empty Queue
+        # empty Queue
         self.pqe = py_queue.Queue()
 
         self.pq = py_queue.Queue()
@@ -15,8 +15,8 @@ class TestQueue(unittest.TestCase):
 
 
     def test_peek_empty(self):
-        self.assertEqual(self.pqe.peekfirstin(), "Empty")
-        self.assertEqual(self.pqe.peeklastin(), "Empty")
+        self.assertEqual(self.pqe.peekfirstin(), "Queue is empty!")
+        self.assertEqual(self.pqe.peeklastin(), "Queue is empty!")
 
     def test_peek_not_empty(self):
         self.assertEqual(self.pq.peekfirstin(), 'corusant')
@@ -43,7 +43,7 @@ class TestQueue(unittest.TestCase):
         self.assertEqual(self.pq.peeklastin(), "yavin")
 
     def test_dequeue_empty(self):
-        self.assertEqual(self.pqe.dequeue(), "Queue already empty!")
+        self.assertEqual(self.pqe.dequeue(), "Queue is empty!")
 
     def test_dequeue_not_empty(self):
         self.assertEqual(self.pq.dequeue(), "corusant")

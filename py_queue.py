@@ -19,23 +19,22 @@ class Queue(object):
         if len(self.items) > 0:
             return self.items.pop()
         else:
-            return "Queue already empty!"
+            return "Queue is empty!"
 
     def peekfirstin(self):
         if len(self.items) > 0:
             return self.items[-1]
         else:
-            return "Empty"
+            return "Queue is empty!"
 
     def peeklastin(self):
         if len(self.items) > 0:
             return self.items[0]
         else:
-            return "Empty"
+            return "Queue is empty!"
 
     def size(self):
         return len(self.items)
 
     def show(self):
         return self.items
-
