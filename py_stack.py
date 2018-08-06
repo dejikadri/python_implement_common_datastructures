@@ -1,9 +1,10 @@
 from collections import deque
 
-"""
-    An implementation of a stack using the Deque("double-ended queue") Python data structure
-"""
+
 class Stack(object):
+    """
+        An implementation of a stack using the Deque("double-ended queue") Python data structure
+    """
 
     def __init__(self):
         self.items = deque()

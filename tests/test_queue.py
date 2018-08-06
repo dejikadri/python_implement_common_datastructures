@@ -28,11 +28,11 @@ class TestQueue(unittest.TestCase):
     def test_size_not_empty(self):
         self.assertEqual(self.pqe.size(), 0)
 
-    def test_isEmpty_when_empty(self):
-        self.assertEqual(self.pqe.isEmpty(), True)
+    def test_isempty_when_empty(self):
+        self.assertEqual(self.pqe.isempty(), True)
 
-    def test_isEmpty_when_not_empty(self):
-        self.assertEqual(self.pq.isEmpty(), False)
+    def test_isempty_when_not_empty(self):
+        self.assertEqual(self.pq.isempty(), False)
 
     def test_enqueue_empty(self):
         self.pqe.enqueue("endor")

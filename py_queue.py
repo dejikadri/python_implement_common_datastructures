@@ -1,11 +1,15 @@
 from collections import deque
 
+
 class Queue(object):
+    """
+        An implementation of a queue using the Deque("double-ended queue") Python data structure
+    """
 
     def __init__(self):
         self.items = deque()
 
-    def isEmpty(self):
+    def isempty(self):
         return self.items == deque()
 
     def enqueue(self, item):
